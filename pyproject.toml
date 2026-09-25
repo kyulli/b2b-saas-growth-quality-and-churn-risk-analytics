@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "b2b-saas-growth-quality-and-churn-risk-analytics"
+version = "0.1.0"
+description = "Reproducible B2B SaaS revenue-quality and churn-risk pipeline"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "scikit-learn>=1.5",
+  "scipy>=1.11",
+  "matplotlib>=3.8",
+  "reportlab>=4.0",
+  "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+dev = [
+  "jupyter>=1.1",
+  "jupytext>=1.16",
+  "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

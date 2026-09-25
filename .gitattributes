@@ -1,0 +1,3 @@
+# The dashboard is a generated, self-contained HTML file with embedded images; keep it out of the language statistics.
+dashboard/** linguist-generated=true
+*.html linguist-detectable=false

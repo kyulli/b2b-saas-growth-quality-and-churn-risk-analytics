@@ -30,15 +30,13 @@ notebooks/
 work/
 tmp/
 
-# Private: code, generated data and intermediate outputs (kept locally, not published)
-src/
-sql/
-tests/
-scripts/
-Makefile
-pyproject.toml
+# Generated data and intermediate outputs (rebuilt by `make pipeline`, not published)
 data/*
 !data/reference/
 outputs/*
 !outputs/figures/
 reports/report.docx
+
+# Legacy modules not used by the pipeline (kept locally)
+src/saas_growth_quality/generate_v2.py
+src/saas_growth_quality/investment_committee.py

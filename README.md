@@ -164,8 +164,26 @@ shows where to point the effort, and forward scenarios show the range for the ne
 | [Dashboard](dashboard/index.html) | One-page view of the charts |
 | [Benchmarks and assumptions](data/reference/) | Every peer figure with its source and period, and every modelling assumption |
 
-## About the data and tools
+## About the data
 
 The numbers illustrate a diligence and monitoring method, not a real company. Peer figures come from SaaS Capital,
-Benchmarkit, SBI and the SEC filings of eleven listed software companies. The analysis was built in Python, SQL and
-Excel; the code is private and available on request.
+Benchmarkit, SBI and the SEC filings of eleven listed software companies.
+
+## Code
+
+Built in Python, SQL (SQLite) and Excel.
+
+| Folder | What it holds |
+|---|---|
+| `src/saas_growth_quality/` | Company simulation, data cleaning, diligence and monitoring, forecasting, churn score, retention economics, reports and workbook |
+| `sql/` | The four SQL tables everything else reads from (customer-month view, cohorts, revenue bridge, discount tagging) |
+| `tests/` | Automated checks on data quality, reconciliation, the pre-close/post-close split and the economics |
+| `scripts/` | Download of public-company financials from SEC EDGAR |
+
+To reproduce every number and chart from scratch:
+
+```bash
+pip install -e '.[dev]'
+make pipeline   # rebuilds data, analysis, charts, brief, dashboard and workbook
+make test
+```
