@@ -1,0 +1,44 @@
+# macOS and editor metadata
+.DS_Store
+**/.DS_Store
+
+# Python bytecode, test caches, and editable-install metadata
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local environments and secrets
+.venv/
+venv/
+.env
+.env.*
+
+# Notebook checkpoints and local tooling caches
+.ipynb_checkpoints/
+
+# Private local research notebooks are intentionally not published.
+notebooks/
+
+.mypy_cache/
+.ruff_cache/
+.matplotlib/
+
+# Local scratch space
+work/
+tmp/
+
+# Private: code, generated data and intermediate outputs (kept locally, not published)
+src/
+sql/
+tests/
+scripts/
+Makefile
+pyproject.toml
+data/*
+!data/reference/
+outputs/*
+!outputs/figures/
+reports/report.docx

@@ -1,0 +1,16 @@
+parameter,target,evidence_type,source_or_rationale,realised_dec2023_to_dec2024
+panel_window,Jan 2022 to Jul 2026,design_choice,Three years of pre-close history for diligence; close in Dec 2024; 19 post-close months out of sample,"4,547 accounts"
+acquisition_close,Dec 2024,design_choice,Aligns the diligence window with the window SaaS Capital's 2025 survey measured,list ARR $113m at close
+portfolio_grr,about 91%,benchmark_calibration,SaaS Capital 2025 median 91% (bootstrapped 92%; equity-backed 90%),90.9%
+portfolio_nrr,102% to 104%,benchmark_calibration,SaaS Capital 2025 median 101% (bootstrapped 104%); target set between the two because the company was bootstrapped before close,102.7%
+grr_by_acv_band,90% to 91% by band,benchmark_calibration,SaaS Capital 2025 ACV bands (<$12k 90%; $12k-$25k 91%; $25k-$50k 91%; $50k-$100k 90%; $100k-$250k 91%),89.2% / 89.6% / 91.2% / 89.7% / 92.9%
+grr_by_contract_term,M2M 89%; annual 90%; multi-year 94%,benchmark_calibration,SaaS Capital 2025 contract-length cut,90.3% / 90.4% / 91.6%
+list_arr_growth_2024,20% to 25%,benchmark_calibration,SaaS Capital 2026 growth report: 2024 medians 23% bootstrapped and 25% equity-backed (2025: 20% and 25%),21.2%
+usage_minus_seat_nrr,positive,benchmark_direction,Benchmarkit 2026 usage 108% vs seat 98% (definition not disclosed),+4.8 pts
+churn_timing,committed contracts churn at renewal plus a small early-exit hazard,design_choice,Contract mechanics; the size of the effect is an assumption,renewal_in_3m is the largest coefficient
+churn_mechanism,additive on the log-odds scale in latent health plus renewal gating,design_choice,No explicit usage-decline x ticket-surge x renewal interaction is simulated; the tree-model test is therefore not evidence about real data,n/a
+discount_effect_on_churn,+1.2 logit per 100pp discount at renewal,design_choice,Assumption; not identified from any source,n/a
+save_offer,35% of would-be churners with price sensitivity >0.25 retained with +10pp discount,design_choice,Assumption; creates reverse causality between discount and churn,n/a
+parameters_after_close,held fixed,design_choice,No market-level drift is simulated after Dec 2024; post-close differences from 2026 benchmarks reflect this,calendar-2025 GRR 92.5%
+defect_rate,0.1% per customer and 0.02% per subscription row,design_choice,Test fixture,all 8 classes detected exactly
+customer_size_distribution,log-uniform within segment,design_choice,No reliable public concentration benchmark found; concentration results follow from this choice,top 10 = 3.7% of ARR at close
